@@ -11,24 +11,25 @@
 
 import ballerina/io;
 import wso2healthcare/healthcare.fhir.r4;
+// import wso2healthcare/healthcare.fhir.r4.parser;
 
-
-public function main() {
-
+public function main() returns error? {
+    
+    // Create a Patient
     r4:Patient patient = {};
-
     patient.name = [{"family":"Simpson", given: ["Homer", "J"]}];
     patient.identifier = [{"value": "7000135", "system": "http://acme.org/MRNs"}];
+    // patient.telecom = [{"use": r4:home, "system": r4:phone, "value": "1 (416) 340-4800"}];
+    // patient.gender = r4:male;
 
-    r4:ContactPoint contact = {};
-    contact.use = r4:home;
-    contact.system = r4:phone;
-    contact.value = "1 (416) 340-4800";
-    patient.telecom = [contact];
+    // Create a context
+    //http:RequestContext ctx = new();
+    //r4:FHIRContext fhirCtx = check r4:getFHIRContext(ctx);
 
-    patient.gender = r4:male;
+    // TODO: Implement the Parser pretty print 
+    // Parse the Patient resource using in-build parser
+    //anydata patientModel = check parser:parse(patient, r4:Patient).ensureType();  
 
-
+    //TODO: Encoding
     io:print(patient.toJson());
-
 }
