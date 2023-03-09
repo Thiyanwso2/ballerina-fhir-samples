@@ -302,7 +302,7 @@ modules = [
 
 [[package]]
 org = "thiyan"
-name = "Example04_ParseResource"
+name = "Example09_ContainedResources"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "io"},
@@ -310,7 +310,7 @@ dependencies = [
 	{org = "wso2healthcare", name = "healthcare.fhir.r4"}
 ]
 modules = [
-	{org = "thiyan", packageName = "Example04_ParseResource", moduleName = "Example04_ParseResource"}
+	{org = "thiyan", packageName = "Example09_ContainedResources", moduleName = "Example09_ContainedResources"}
 ]
 
 [[package]]

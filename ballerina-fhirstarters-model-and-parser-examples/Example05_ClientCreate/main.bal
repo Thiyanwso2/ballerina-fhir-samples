@@ -1,7 +1,7 @@
 import ballerina/io;
 import wso2healthcare/healthcare.fhir.r4;
 import wso2healthcare/healthcare.clients.fhirr4;
-// import ballerina/http;
+
 import ballerina/log;
 
 public function main() {

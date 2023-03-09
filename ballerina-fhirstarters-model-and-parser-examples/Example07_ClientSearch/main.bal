@@ -18,7 +18,7 @@ public function main() {
             mimeType: fhirr4:FHIR_JSON
         };
 
-        map<string[]> searchParams = {"-id": ["591661"]};
+        map<string[]> searchParams = {"_id": ["591661"]};
         // Do the FHIR interaction using FHIR client connector
         do {
 	        fhirr4:FHIRConnector fhirConnectorObj = check new(sampleConfig);
