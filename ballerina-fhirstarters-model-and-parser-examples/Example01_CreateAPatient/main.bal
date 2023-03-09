@@ -13,18 +13,16 @@ import ballerina/io;
 import wso2healthcare/healthcare.fhir.r4;
 
 public function main() {
+
+    //Create a Patient record
     r4:Patient patient = {};
 
-    // Add a "name" element
-    r4:HumanName[] humanName= [{"family":"Simpson", given: ["Homer", "J"]}];
-    patient.name = humanName;
-
-    // Add an "identifier" element
-    r4:Identifier[] identifier = [{"value": "7000135", "system": "http://acme.org/MRNs"}];
+    // Option 1: Create an "identifier" element and add it to the patient
+    r4:Identifier[] identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
     patient.identifier = identifier;
 
-    // Assign value directly to the existing patient data
-    //patient.identifier = [{"value": "7000135", "system": "http://acme.org/MRNs"}];
+    // Option 2: Assign name element directly to the existing patient data
+    patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
 
     io:println(patient.toJson());
 }

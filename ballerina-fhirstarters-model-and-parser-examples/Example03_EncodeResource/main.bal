@@ -11,17 +11,23 @@
 
 import ballerina/io;
 import wso2healthcare/healthcare.fhir.r4;
-// import wso2healthcare/healthcare.fhir.r4.parser;
 
 public function main() returns error? {
-    
-    // Create a Patient
+
+    // Create a Patient and add some data on it
     r4:Patient patient = {};
-    patient.name = [{"family":"Simpson", given: ["Homer", "J"]}];
-    patient.identifier = [{"value": "7000135", "system": "http://acme.org/MRNs"}];
-    patient.telecom = [{"use": r4:home, "system": r4:phone, "value": "1 (416) 340-4800"}];
+    patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
+    patient.identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
+    patient.telecom = [{use: r4:home, system: r4:phone, value: "1 (416) 340-4800"}];
     patient.gender = r4:male;
 
     //To string
-    io:print(patient.toJsonString());
+    io:println("To string: " + patient.toString());
+
+    //To json string
+    io:println("To Json string: " + patient.toJsonString());
+
+    //To Json
+    io:print("To Json: ");
+    io:print(patient.toJson());
 }

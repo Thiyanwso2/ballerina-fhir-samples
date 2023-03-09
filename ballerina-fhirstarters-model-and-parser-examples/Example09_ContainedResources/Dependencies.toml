@@ -228,7 +228,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "observe"
-version = "1.0.7"
+version = "1.0.6"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"}
 ]
@@ -347,4 +347,5 @@ modules = [
 	{org = "wso2healthcare", packageName = "healthcare.fhir.r4", moduleName = "healthcare.fhir.r4.parser"},
 	{org = "wso2healthcare", packageName = "healthcare.fhir.r4", moduleName = "healthcare.fhir.r4.terminology"}
 ]
+
 

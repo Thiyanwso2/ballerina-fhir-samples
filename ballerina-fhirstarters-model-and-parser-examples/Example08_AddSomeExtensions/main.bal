@@ -2,10 +2,11 @@ import ballerina/io;
 import wso2healthcare/healthcare.fhir.r4;
 
 public function main() {
-    // Create a Patient
+    
+    // Create a Patient and add some data on it
     r4:Patient patient = {};
-    patient.name = [{"family":"Simpson", given: ["Homer", "J"]}];
-    patient.identifier = [{"value": "7000135", "system": "http://acme.org/MRNs"}];
+    patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
+    patient.identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
     patient.gender = r4:male;
 
     // Create CodeableConcept record
@@ -17,7 +18,6 @@ public function main() {
     // Assign the extension record to the patient record
     patient.extension = [extension];
 
-    
     // Add an extension on a primitive
     patient.birthDate = "1955-02-22";
     r4:StringExtension ext = {valueString: "23:30", url: "http://hl7.org/fhir/StructureDefinition/patient-birthTime"};
