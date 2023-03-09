@@ -1,6 +1,6 @@
 # ballerina -simple-fhir-servers
 
-- Navigate to the roor directory FHIR API you want run for e-g: PatientAPI
+- Navigate to the root directory FHIR API you want run for e-g: PatientAPI
 - Then run the below command 
 
 ```
