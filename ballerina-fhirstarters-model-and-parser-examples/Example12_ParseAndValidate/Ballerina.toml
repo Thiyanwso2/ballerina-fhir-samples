@@ -1,0 +1,8 @@
+[package]
+org = "thiyan"
+name = "Example12_ParseAndValidate"
+version = "0.1.0"
+distribution = "2201.4.1"
+
+[build-options]
+observabilityIncluded = true
