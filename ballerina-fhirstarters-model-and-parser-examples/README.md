@@ -28,3 +28,9 @@ bal run
 - [Example09_ContainedResources](Example09_ContainedResources): This will create Observation and Patient record, add reference 
 
 - [Example10_UseExtendedPatient](Example10_UseExtendedPatient): This will add US Core Patient model and add some data on it.
+
+- [Example11_ValidateFhirJsonResource](Example11_ValidateFhirJsonResource): This will validate a JSON FHIR resource directly.
+
+- [Example12_ParseAndValidate](Example12_ParseAndValidate): This will parse a JSON FHIR resource and validate it.
+
+- [Example13_Validate](Example13_Validate): This will parse define FHIR resource as Ballerina record and validate it.
