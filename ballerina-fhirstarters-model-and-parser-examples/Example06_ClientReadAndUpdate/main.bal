@@ -1,8 +1,8 @@
 import ballerina/io;
-import wso2healthcare/healthcare.fhir.r4;
-import wso2healthcare/healthcare.fhir.r4.parser;
-import wso2healthcare/healthcare.clients.fhirr4;
 import ballerina/log;
+import wso2healthcare/healthcare.fhir.r4;
+import wso2healthcare/healthcare.clients.fhirr4;
+import wso2healthcare/healthcare.fhir.r4.parser;
 
 public function main() returns error? {
 
@@ -20,6 +20,8 @@ public function main() returns error? {
 
         // Read a Patient record using the connector
         fhirr4:FHIRResponse response = check fhirConnector->getById(fhirr4:PATIENT, "591661");
+
+        io:print(response);
 
         // Extract and parse Patient model from the response 
         r4:Patient patient = check parser:parse(response.get("resource").toJson()).ensureType();

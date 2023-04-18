@@ -1,8 +1,7 @@
 import ballerina/io;
+import ballerina/log;
 import wso2healthcare/healthcare.fhir.r4;
 import wso2healthcare/healthcare.clients.fhirr4;
-
-import ballerina/log;
 
 public function main() {
 
@@ -10,7 +9,7 @@ public function main() {
     r4:Patient patient = {};
     patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
     patient.identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
-    patient.gender = r4:male;
+    patient.gender = r4:CODE_GENDER_MALE;
 
     // Create a FHIR client connector config record
     // https://central.ballerina.io/wso2healthcare/healthcare.clients.fhirr4

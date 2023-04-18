@@ -7,7 +7,7 @@ public function main() {
     r4:Patient patient = {};
     patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
     patient.identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
-    patient.gender = r4:male;
+    patient.gender = r4:CODE_GENDER_MALE;
 
     // Create CodeableConcept record
     r4:CodeableConcept codeable = {"text": "Patient is a VIP"};

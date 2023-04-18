@@ -19,7 +19,7 @@ public function main() returns error? {
     patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
     patient.identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
     patient.telecom = [{use: r4:home, system: r4:phone, value: "1 (416) 340-4800"}];
-    patient.gender = r4:male;
+    patient.gender = r4:CODE_GENDER_MALE;
 
     //To string
     io:println("To string: " + patient.toString());

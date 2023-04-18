@@ -11,7 +11,7 @@ public function main() {
     patient.id = "1563440";
     patient.name = [{family: "Simpson", given: ["Homer", "J"]}];
     patient.identifier = [{value: "7000135", system: "http://acme.org/MRNs"}];
-    patient.gender = r4:male;
+    patient.gender = r4:CODE_GENDER_MALE;
 
     // Create a Reference record with Patient data
     r4:Reference reference = {id: patient.id, 'type: "Patient"};

@@ -1,7 +1,7 @@
 import ballerina/io;
-import wso2healthcare/healthcare.fhir.r4.uscore501;
-import wso2healthcare/healthcare.fhir.r4.parser;
 import ballerina/log;
+import wso2healthcare/healthcare.fhir.r4.parser;
+import wso2healthcare/healthcare.fhir.r4.uscore501;
 
 public function main() {
 
@@ -9,6 +9,23 @@ public function main() {
     json patientPayload = {
         "resourceType": "Patient",
         "id": "1",
+        "identifier": [
+            {
+                "use": "usual",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                            "code": "MR",
+                            "display": "Medical Record Number"
+                        }
+                    ],
+                    "text": "Medical Record Number"
+                },
+                "system": "http://hospital.smarthealthit.org",
+                "value": "1032702"
+            }
+        ],
         "meta": {
             "profile": [
                 "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"

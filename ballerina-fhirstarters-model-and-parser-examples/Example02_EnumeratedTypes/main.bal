@@ -29,7 +29,7 @@ public function main() {
     patient.telecom = [contact];
 
     // Add an "gender" to the patient
-    patient.gender = r4:male;
+    patient.gender = r4:CODE_GENDER_MALE;
 
     io:print(patient.toJson());
 
